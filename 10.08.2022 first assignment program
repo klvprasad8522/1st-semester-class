@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+    int num,x,y;
+    scanf("%d",&num);
+    scanf("%d %d",&x,&y);
+	int result ,multiply= 1;
+    while (x / 10 > 0)
+    {
+       
+        int remainder = x % 10;
+       
+        if (remainder == x){
+            result= result + y * multiply;
+            result = result + y * multiply;
+        }
+        else{ 
+            result = result + remainder * multiply;
+            result = result + num * multiply;
+        }
+        
+        multiply *= 10;
+        num = num / 10;
+    }
+    printf("%d",result);
+}
