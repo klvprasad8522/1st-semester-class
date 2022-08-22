@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main()
 {
     int r,c;       
@@ -35,7 +34,7 @@ int main()
         {
             rsum=rsum+arr[i][j];
         }
-        printf(" %d Sum row = %d\n",i,rsum);
+        printf(" %d Sum row = %d\n",i+1,rsum);
     }
 
 }
