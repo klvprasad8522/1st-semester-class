@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+   int i,j;
+   int n;
+   printf("enter n vlalu:");
+   scanf("%d",&n);
+   for(i=1;i<=n;i++)
+   {
+       printf("%d ",i);
+       printf("%d ",i*2);
+       printf("%d ",i*3);
+       printf("%d ",i*4);
+       printf("%d ",i*5);
+       printf(" \t \n");
+   }
+   return 0;
+   
+}
