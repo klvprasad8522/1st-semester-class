@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int n,m;
+    printf("enter the n and m value:");
+    scanf("%d %d",&n,&m);
+    display(n,m);
+  
+}
+int display(int start,int end)
+{
+    if(start>end)
+    return;
+    else{
+     printf("%d ",start);
+    }
+    display(start+1,end);
+}
