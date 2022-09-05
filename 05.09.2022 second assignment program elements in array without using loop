@@ -1,0 +1,21 @@
+#include<stdio.h>
+void main()
+{
+    int arr[10],i,n;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    int len=n-1;
+    display(arr,0,len);
+}
+void display(int arr[],int start,int end)
+{
+    if(start>end)
+    return;
+    else{
+        printf("%d",arr[start]);
+    }
+    display(arr,start+1,end);
+}
