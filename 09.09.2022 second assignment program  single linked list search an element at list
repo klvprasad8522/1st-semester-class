@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+  int data;
+  struct node *ptr;
+}
+ 
+stnode, *head;
+
+int FindElement(int);
+void main()
+{
+	int n,i,FindElem,FindPlc;
+	stnode.ptr=NULL;
+	head=&stnode;
+    printf(" enter the number of nodes : ");
+    scanf("%d", &n);	
+	printf("\n");
+	for(i=0;i< n;i++)
+	{
+		head->ptr=(struct node *)malloc(sizeof(struct node));
+		scanf("%d",&head->data);
+		head=head->ptr;
+	}
+	head->ptr=NULL;
+	printf("\n Data entered in the list are :\n");
+
+    head=&stnode;
+	while(head->ptr!=NULL)
+	{
+		printf("%d\n",head->data);
+		head=head->ptr;
+	}
+
+	printf("\n");
+	printf(" Input the element to be searched : ");
+	scanf("%d",&FindElem);
+	FindPlc=FindElement(FindElem);
+	if(FindPlc<=n)
+		printf(" Element found at node %d \n\n",FindPlc);
+	else
+		printf(" This element does not exists in list.\n\n");
+}
+int FindElement(int FindElem)
+{
+	int ctr=1;
+	head=&stnode;
+	while(head->ptr!=NULL)
+	{
+		if(head->data==FindElem)
+			break;
+		else
+			ctr++;
+		 head=head->ptr;
+	}
+	return ctr;
+}
